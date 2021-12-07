@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: hsl(217, 54%, 11%);
+    display: flex;
+    justify-content: center;
+    margin: auto 0;
+}
+
+.container {
+    padding: 2rem;
+}
+
+.card {
+    max-width: 20rem;
+    background-color: hsl(216, 50%, 16%);
+    padding: 1.3rem;
+    border-radius: 10px;
+    margin: auto 0;
+}
+
+.img > img{
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+}
+
+.description > h1 {
+    color: white;
+    margin: 1.2rem 0;
+    transition: color .5s;
+    cursor: pointer;
+}
+
+.description > h1:hover {
+    color: cyan;
+}
+
+.description > p {
+    color: hsl(215, 51%, 70%);
+    margin-bottom: 1.2rem;
+    line-height: 1.8rem;
+}
+
+.description > .ghost {
+    color: cyan;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid hsl(215, 32%, 27%);
+    padding-bottom: 1.2rem;
+}
+
+.icon-div1, .icon-div2 {
+    display: flex;
+    align-items: center;
+}
+
+.icon-div1 > img{
+    margin-right: .4rem;
+}
+
+.icon-div2 {
+    color: grey;
+}
+
+.icon-div2 > img{
+    margin-right: .4rem;
+}
+
+.creator {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    padding-bottom: .6rem;
+}
+
+.creator > img {
+    width: 30px;
+    margin-right: .6rem;
+}
+
+.creator > p {
+    font-size: 15px;
+    color: white;
+    transition: color .5s;
+    cursor: pointer;
+}
+
+.creator > p:hover {
+    color: cyan;
+}
+
+.creator > p > span {
+    color: hsl(215, 51%, 70%);
+}
+
+.img {
+    position: relative;
+}
+
+.img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99%;
+    background: hsl(178, 100%, 50%, 60%) url("/images/icon-view.svg") no-repeat center;
+    border-radius: 10px;
+    opacity: 0;
+    transition:opacity .5s;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.img:hover::after {
+    opacity: 1;
+    transition:opacity .5s;
+}
